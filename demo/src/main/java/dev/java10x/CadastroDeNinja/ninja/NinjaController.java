@@ -1,8 +1,6 @@
 package dev.java10x.CadastroDeNinja.ninja;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -16,7 +14,7 @@ public class NinjaController {
         return "Boas Vindas";
     }
 
-    @GetMapping("/createUser")
+    @PostMapping("/createUser")
     public String CreateUser() {
         return "Create a user";
     }
@@ -26,12 +24,12 @@ public class NinjaController {
         return "List a user";
     }
 
-    @GetMapping("/updateUser")
+    @PutMapping("/updateUser")
     public String updateUser() {
         return "Update a user";
     }
 
-    @GetMapping("/delete")
+    @DeleteMapping("/delete")
     public String deleteUser() {
         return "Delete a user";
     }
